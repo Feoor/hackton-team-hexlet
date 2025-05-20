@@ -93,9 +93,18 @@
   opacity: 0.8;
   transition: opacity 0.3s;
 }
-
 .input-hint a:hover {
   opacity: 1;
+}
+
+.auth__form-input input.is-invalid {
+  border: 1px solid #dc3545;
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+
+.auth__form-input input.is-valid {
+  border: 1px solid #198754;
+  box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
 .auth__form-btn {
