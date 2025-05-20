@@ -41,6 +41,12 @@ main {
   flex: 1 0 auto;
 }
 
+.container-sm {
+  max-width: 400px;
+  width: 100%;
+  padding: 0 16px;
+}
+
 .btn {
   font-family: "Open Sans", sans-serif;
 }
@@ -71,10 +77,32 @@ a {
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 576px) {
   .container-sm {
-    max-width: 400px;
-    width: 100%;
-    padding: 0 16px;
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-sm {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container-sm {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-sm {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container-sm {
+    max-width: 1320px;
   }
 }
