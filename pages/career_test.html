@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тест на профориентацию - WORK CRAFT</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+  <!-- Main css -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <style>
+    .test-container {
+      padding-top: 100px;
+      padding-bottom: 160px;
+    }
+
+    .question-card {
+      background: #393b38;
+      border-radius: 11px;
+      padding: 25px 20px;
+      margin-bottom: 15px;
+      color: #fafafa;
+    }
+
+    .question-title {
+      font-family: var(--second-family), sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .answer-option {
+      background: #fafafa;
+      border-radius: 8px;
+      padding: 12px 15px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+      color: #393b38;
+      font-family: var(--font-family), sans-serif;
+    }
+
+    .answer-option:hover, .answer-option.selected {
+      background: #ff5102;
+      color: #fafafa;
+    }
+
+    .test-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .test-button {
+      background: #ff5102;
+      color: #fafafa;
+      padding: 12px 25px;
+      border-radius: 15px;
+      border: none;
+      font-family: var(--second-family), sans-serif;
+      font-weight: 400;
+    }
+
+    .test-button:disabled {
+      background: #7a7a7a;
+    }
+
+    .result-card {
+      background: #fafafa;
+      border-radius: 11px;
+      padding: 20px;
+      margin-bottom: 20px;
+      color: #393b38; /* Добавляем цвет текста */
+    }
+
+    /* Изменяем цвет заголовка результата, если нужно чтобы он тоже был #393b38 */
+    .result-title {
+      font-family: var(--second-family), sans-serif;
+      font-size: 22px;
+      color: #393b38; /* Меняем с #ff5102 на #393b38 */
+      margin-bottom: 15px;
+    }
+
+    /* Для всех параграфов внутри карточки результатов */
+    .result-card p {
+      color: #393b38;
+    }
+
+    .profession-match {
+      background: #ebebeb;
+      border-left: 4px solid #ff5102;
+      padding: 10px 15px;
+      margin-bottom: 10px;
+    }
+
+    .progress-indicator {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .progress-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #7a7a7a;
+      margin-right: 8px;
+    }
+
+    .progress-dot.active {
+      background: #ff5102;
+    }
+    /* Стили для мобильных устройств */
+    @media (max-width: 768px) {
+      .test-container {
+        padding-top: 40px;
+        padding-bottom: 120px;
+      }
+
+      /* Скрываем заголовок и описание теста на мобильных устройствах */
+      .test-container .about__main-title,
+      .test-container .about__main-text {
+        display: none;
+      }
+
+      /* Скрываем точки-индикаторы вопросов на мобильных устройствах */
+      .progress-indicator {
+        display: none;
+      }
+
+      /* Стиль для отображения номера вопроса по центру сверху */
+      .question-title {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      /* Корректировка отступов для карточки вопроса */
+      .question-card {
+        padding: 20px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="main">
+
+
+    <section class="test-container">
+      <div class="container-sm">
+        <h1 class="about__main-title text-center mb-4">ТЕСТ НА ПРОФОРИЕНТАЦИЮ</h1>
+        <p class="about__main-text text-center mb-5">Ответь на несколько вопросов, и мы подскажем, какие профессии тебе подойдут!</p>
+
+        <div id="test-container">
+          <!-- Тест будет загружаться сюда с помощью JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <nav class="navigation">
+      <!-- Здесь ваша общая навигация -->
+    </nav>
+  </main>
+
+  <script src="/js/bootstrap/bootstrap.js"></script>
+  <script src="/js/app.js"></script>
+  <script src="/js/theme.js"></script>
+  <script src="/js/career-test.js"></script>
+</body>
+</html>
