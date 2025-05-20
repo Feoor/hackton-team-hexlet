@@ -1,5 +1,60 @@
-p {
-  font-size: 24px;
-  color: aqua;
+@import "fonts";
+@import "authentication";
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --second-family: "Days One", sans-serif;
+
+//  Светлая тема
+  --bg-color: #fafafa;
+  --text-color: #333;
+  --primary-color: #FF5102;
+  --primary-color-hover: #d54203;
+  --secondary-color: #6c757d;
 }
 
+[data-theme="dark"] {
+//  Тёмная тема
+  --bg-color: #393b38;
+  --primary-color: #FF5102;
+  --primary-color-hover: #d54203;
+  --text-color: #fff;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color .3s, color .3s;
+  min-height: 100vh;
+}
+
+.btn {
+  font-family: "Open Sans", sans-serif;
+}
+.btn.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  transition: background-color .3s, color .3s;
+
+  &:hover {
+    background-color: var(--primary-color-hover);
+  }
+
+  &:active {
+    background-color: var(--primary-color);
+  }
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color .3s;
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
+}

@@ -1,27 +1,100 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Demo</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/css/bootstrap/bootstrap.css">
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="/css/style.css">
   <meta name="description" content="">
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
 
-  <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
 </head>
-
 <body>
+<main class="main">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+  <section class="about">
+    <div class="container-sm">
+      <img src="/img/orange_helmet.png" alt="orange helmet">
+      <img src="/img/screw.png" alt="гайка">
+      <img src="/img/wrench.png" alt="гаечный ключ">
+      <div class="about__main">
+        <h2 class="about__main-title">WORK CRAFT - ЭТО:</h2>
+        <p class="about__main-text">платформа, которая помогает молодым людям открыть для себя востребованные рабочие профессии через интерактив, мультимедиа и реальные истории.</p>
+        <p class="about__main-text">Будь на волне с <b>WORK CRAFT</b></p>
+      </div>
+    </div>
+  </section>
+  <section class="offering">
+    <div class="container-sm">
+      <h2 class="offering__title">ЧТО МЫ ПРЕДЛАГАЕМ?</h2>
+        <div class="offering__professions">
+          <h3 class="offering__professions-title">КАТАЛОГ ПРОФЕССИЙ</h3>
+          <p class="offering__professions-text">Наш каталог — это твой старт в мир востребованных рабочих специальностей.
+            Здесь всё просто: выбирай сферу, раскрывай карточки, смотри фото, видео и узнай, что тебя ждёт. Никакой скучной теории — только реальные профессии, реальные возможности и чёткое представление, куда идти дальше.</p>
+        </div>
 
+      <div class="offering__test">
+        <h3 class="offering__professions-title">ПРОЙДИТЕ ТЕСТ - НАЙДИ СВОЮ ПРОФЕССИЮ</h3>
+        <p class="offering__professions-text">Не знаешь, с чего начать? Тебе интересно, какая рабочая профессия подойдёт именно тебе? Мы подготовили короткий и понятный тест, который поможет определиться с направлением.</p>
+        <a class="offering__test-href" href="">Перейти</a>
+      </div>
+    </div>
+  </section>
+  <nav>
+    <div class="container-sm">
+      <ul class="nav nav-pills justify-content-center">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/index.html">Главная</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/log_in.html">
+            <svg width="34" height="37" viewBox="0 0 34 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.333252 32.5833V13.8333C0.333252 13.1736 0.481168 12.5486 0.777002 11.9583C1.07283 11.368 1.48047 10.8819 1.99992 10.5L14.4999 1.12496C15.2291 0.569404 16.0624 0.291626 16.9999 0.291626C17.9374 0.291626 18.7707 0.569404 19.4999 1.12496L31.9999 10.5C32.5207 10.8819 32.9291 11.368 33.2249 11.9583C33.5207 12.5486 33.668 13.1736 33.6666 13.8333V32.5833C33.6666 33.7291 33.2582 34.7104 32.4416 35.527C31.6249 36.3437 30.6444 36.7514 29.4999 36.75H23.2499C22.6596 36.75 22.1652 36.55 21.7666 36.15C21.368 35.75 21.168 35.2555 21.1666 34.6666V24.25C21.1666 23.6597 20.9666 23.1652 20.5666 22.7666C20.1666 22.368 19.6721 22.168 19.0832 22.1666H14.9166C14.3263 22.1666 13.8319 22.3666 13.4332 22.7666C13.0346 23.1666 12.8346 23.6611 12.8333 24.25V34.6666C12.8333 35.2569 12.6333 35.752 12.2333 36.152C11.8333 36.552 11.3388 36.7514 10.7499 36.75H4.49992C3.35408 36.75 2.37353 36.3423 1.55825 35.527C0.742974 34.7118 0.334641 33.7305 0.333252 32.5833Z" fill="#FF5102" />
+            </svg>
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="/pages/sing_up.html">
+            <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.5 18.5C7 18.5 4.875 17.625 3.125 15.875C1.375 14.125 0.5 12 0.5 9.5C0.5 9 0.5375 8.5 0.6125 8C0.6875 7.5 0.825 7.025 1.025 6.575C1.15 6.325 1.3065 6.1375 1.4945 6.0125C1.6825 5.8875 1.8885 5.8 2.1125 5.75C2.3365 5.7 2.568 5.7065 2.807 5.7695C3.046 5.8325 3.2645 5.9635 3.4625 6.1625L7.4 10.1L10.1 7.4L6.1625 3.4625C5.9625 3.2625 5.8315 3.044 5.7695 2.807C5.7075 2.57 5.701 2.3385 5.75 2.1125C5.799 1.8865 5.8865 1.68 6.0125 1.493C6.1385 1.306 6.326 1.15 6.575 1.025C7.025 0.825 7.5 0.6875 8 0.6125C8.5 0.5375 9 0.5 9.5 0.5C12 0.5 14.125 1.375 15.875 3.125C17.625 4.875 18.5 7 18.5 9.5C18.5 10.075 18.45 10.619 18.35 11.132C18.25 11.645 18.1 12.151 17.9 12.65L25.475 20.15C26.2 20.875 26.5625 21.7625 26.5625 22.8125C26.5625 23.8625 26.2 24.75 25.475 25.475C24.75 26.2 23.8625 26.5625 22.8125 26.5625C21.7625 26.5625 20.875 26.1875 20.15 25.4375L12.65 17.9C12.15 18.1 11.644 18.25 11.132 18.35C10.62 18.45 10.076 18.5 9.5 18.5Z" fill="#FAFAFA" />
+            </svg>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+</main>
+
+<div class="theme-switch">
+  <button id="themeToggle" class="btn btn-sm btn-outline-secondary">
+    <span class="light-icon">🔆</span>
+    <span class="dark-icon" style="display:none">🌙</span>
+  </button>
+</div>
+
+
+<!-- bootstrap bundle js -->
+<!--  <script src="js/bootstrap/bootstrap.bundle.js"></script>-->
+<!-- bootstrap js -->
+<script src="js/bootstrap/bootstrap.js"></script>
+
+<!-- Скрипты проекта -->
+<script src="/js/app.js"></script>
+<script src="/js/theme.js"></script>
 </body>
 
 </html>
