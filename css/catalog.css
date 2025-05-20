@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --option-height: 400px;
+    --option-width: 60px;
+    --radius: 1.875rem;
+    --gutter: 10px;
+    --bg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #1f2020;
+    }
+}
+
+body {
+    background-color: var(--bg);
+    min-width: 320px;
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Мобильная версия (по умолчанию) */
+.options {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+.option {
+    position: relative;
+    background-color: color-mix(in srgb, var(--bg), CanvasText 10%);
+    margin: var(--gutter);
+    flex-grow: 1;
+    border-radius: var(--radius);
+    flex: 0 0 var(--option-width);
+    transition: flex-grow 1.25s cubic-bezier(.17, .84, .44, 1);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.option:not(.active) {
+    cursor: pointer;
+}
+
+.option.active {
+    flex-grow: 5;
+}
+
+.corner-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: white;
+    padding: 3px;
+}
+
+.corner-button svg path {
+    fill: #ff5c00;
+}
+
+.corner-button.orange {
+    background-color: #ff5c00;
+}
+
+.corner-button.orange svg path {
+    fill: #fafafa;
+}
+
+h3 {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all 0.5s ease 0.2s;
+}
+
+.details-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 6px 12px;
+    background-color: #ff5c00;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease 0.3s;
+}
+
+.option.active h3,
+.option.active .details-btn {
+    opacity: 1;
+    transform: translate(0);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+
+@media (min-width: 768px) {
+    .options {
+        flex-direction: row;
+        min-width: 480px;
+        height: var(--option-height);
+        min-height: auto;
+        /*margin: 0 50px;*/
+    }
+
+    .corner-button {
+        width: 30px;
+        height: 30px;
+        font-size: 23px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .details-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+/* Стили для новых элементов */
+.catalog-header {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.catalog-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--text-color, #ff5c00);
+    margin-bottom: 20px;
+}
+
+.test-block {
+    background-color: color-mix(in srgb, var(--bg), CanvasText 5%);
+    border-radius: var(--radius);
+    padding: 30px;
+    margin: 20px;
+    text-align: center;
+}
+
+.test-title {
+    font-size: 28px;
+    color: var(--text-color, #ff5c00);
+    margin-bottom: 15px;
+}
+
+.test-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.large-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    display: inline-block;
+    position: static;
+    opacity: 1;
+    transform: none;
+    margin-top: 15px;
+}
+
+.heroes-section {
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.heroes-title {
+    font-size: 28px;
+    color: var(--text-color, #ff5c00);
+    margin-bottom: 20px;
+}
+
+.video-container {
+    width: 100%;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+
+.hero-video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    background-color: #333;
+}
+
+.hero-story h3 {
+    position: static;
+    opacity: 1;
+    transform: none;
+    font-size: 20px;
+    color: inherit;
+    text-shadow: none;
+    margin-bottom: 15px;
+}
+
+.hero-story p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.hero-story blockquote {
+    font-style: italic;
+    border-left: 3px solid #ff5c00;
+    padding-left: 15px;
+    margin: 20px 0;
+}
+
+/* Адаптивные стили */
+@media (min-width: 768px) {
+    .catalog-title {
+        font-size: 42px;
+    }
+
+    .test-block, .heroes-section {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-story {
+        padding: 0 20px;
+    }
+}
