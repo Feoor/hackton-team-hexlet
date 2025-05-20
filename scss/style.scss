@@ -42,9 +42,21 @@ main {
 }
 
 .container-sm {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   padding: 0 16px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color .3s;
+
+  &:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+  }
 }
 
 .btn {
@@ -65,18 +77,7 @@ main {
   }
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
-  text-underline-offset: 3px;
-  transition: color .3s;
-
-  &:hover {
-    color: var(--primary-color);
-    text-decoration: underline;
-  }
-}
-
+// Responsive adjustments
 @media (min-width: 576px) {
   .container-sm {
     max-width: 540px;

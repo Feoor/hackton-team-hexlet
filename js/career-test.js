@@ -286,9 +286,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
               </div>
 
-              <div class="test-nav mt-4">
-                <button class="test-button" id="retry-button">Пройти заново</button>
-                <a href="/pages/professions.html" class="test-button">Узнать больше</a>
+              <div class="test-nav mt-4 row g-3">
+                <button class="test-button col-5" id="retry-button">Пройти заново</button>
+                <a href="/pages/professions.html" class="test-button text-center col-5">Узнать больше</a>
               </div>
             </div>
           `;
