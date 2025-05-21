@@ -228,9 +228,20 @@ main {
 }
 
 .container-sm {
-  max-width: 400px;
+  max-width: 380px;
   width: 100%;
   padding: 0 16px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .btn {
@@ -250,15 +261,113 @@ main {
   background-color: var(--primary-color);
 }
 
-a {
-  color: var(--text-color);
-  text-decoration: none;
-  text-underline-offset: 3px;
-  transition: color 0.3s;
+.navigation {
+  background: #393b38;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
-a:hover {
-  color: var(--primary-color);
-  text-decoration: underline;
+
+.about {
+  margin-bottom: 78px;
+}
+
+.about__main-title {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #fafafa;
+}
+
+.about__main-text {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fafafa;
+}
+
+.offering__title {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: #fafafa;
+}
+
+.offering__professions, .offering__test, .offering__heroes {
+  border-radius: 11px;
+  padding: 14px 16px;
+  max-width: 350px;
+  background: #fafafa;
+}
+
+.offering__professions-title {
+  font-family: var(--second-family), sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ff5102;
+}
+
+.offering__professions-text {
+  font-family: var(--font-family), sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #393b38;
+  margin: 0;
+}
+
+.offering__test-href {
+  border-radius: 15px;
+  padding: 10px;
+  width: 100%;
+  background: #ff5102;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.offering {
+  padding-bottom: 160px;
+}
+
+.main {
+  overflow: hidden;
+  position: relative;
+  padding-top: 363px;
+}
+
+.helmet {
+  top: 90px;
+  left: 100px;
+  z-index: -1;
+}
+
+.wrench {
+  top: -150px;
+  left: -200px;
+}
+
+.screw {
+  top: 200px;
+  left: -50px;
+}
+
+.screw-2 {
+  top: -50px;
+  left: 280px;
+  rotate: 60deg;
+  transform: scale(1.2);
+}
+
+.drill {
+  top: 1000px;
+  left: 200px;
+  z-index: -1;
+}
+
+.Confectionery-package {
+  top: 1200px;
+  left: -100px;
+  z-index: -1;
 }
 
 @media (min-width: 576px) {
