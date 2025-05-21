@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // FIXME: Удалить потом
-  console.log('DOMContent Loaded!');
-
   const themeToggle = document.getElementById('themeToggle');
   if (themeToggle) {
     const lightIcon = themeToggle.querySelector('.light-icon');

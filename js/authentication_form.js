@@ -1,7 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Поиск элементов формы
   const nameInput = document.getElementById('name-form-input');
+  const socialButtons = document.querySelectorAll('button.authentication__footer-socials');
   const form = document.querySelector('.authentication__form');
+
+  if (socialButtons.length > 0) {
+    for (const socialButton of socialButtons) {
+      socialButton.addEventListener('click', () => {
+        alert("Вход через социальную сеть");
+        window.location.assign("../index.html");
+      })
+    }
+  }
 
   if (nameInput) {
     // Функция валидации имени
@@ -10,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return 'Имя обязательно для заполнения';
       }
 
-      if (name.length < 2) {
+      if (name.length < 3) {
         return 'Имя должно содержать минимум 3 символа';
       }
 
@@ -45,14 +55,18 @@ document.addEventListener('DOMContentLoaded', function() {
     // Валидация при отправке формы
     if (form) {
       form.addEventListener('submit', function(event) {
+        event.preventDefault();
         const name = nameInput.value.trim();
         const error = validateName(name);
 
         if (error) {
-          event.preventDefault();
-          errorMessage.textContent = error;
           nameInput.classList.add('is-invalid');
+          return false;
         }
+
+        // FIXME: Перенаправление на главную страницу не работает
+        window.location.assign("../index.html");
+        return true;
       });
     }
   }
