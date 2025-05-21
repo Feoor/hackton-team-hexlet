@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Days+One&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 .authentication {
   min-height: 100vh;
@@ -193,6 +194,10 @@
 :root {
   --font-family: "Open Sans", sans-serif;
   --second-family: "Days One", sans-serif;
+  --option-height: 400px;
+  --option-width: 60px;
+  --radius: 1.875rem;
+  --gutter: 10px;
   --bg-color: #fafafa;
   --text-color: #333;
   --primary-color: #FF5102;
@@ -231,6 +236,7 @@ main {
   max-width: 380px;
   width: 100%;
   padding: 0 16px;
+  margin: 0 auto;
 }
 
 a {
@@ -240,7 +246,6 @@ a {
   transition: color 0.3s;
 }
 a:hover {
-  color: var(--primary-color);
   text-decoration: underline;
 }
 
@@ -268,108 +273,103 @@ a:hover {
   width: 100%;
 }
 
-.about {
-  margin-bottom: 78px;
+/* Десктопная навигация (появляется только на экранах от 992px) */
+@media (min-width: 992px) {
+  /* Добавляем новую навигацию для десктопов */
+  .desktop-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(57, 59, 56, 0.95);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+  }
+  .desktop-navigation .container-sm {
+    max-width: 1200px;
+  }
+  .desktop-navigation .nav-pills {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .desktop-navigation .nav-item {
+    display: flex;
+    align-items: center;
+  }
+  .desktop-navigation .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    color: #fafafa;
+  }
+  .desktop-navigation .nav-link:hover {
+    background: rgba(255, 81, 2, 0.2);
+  }
+  .desktop-navigation .nav-link.active {
+    background: rgba(255, 81, 2, 0.4);
+  }
+  .desktop-navigation .nav-link svg {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+  }
+  .desktop-navigation .Account img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  /* Скрываем мобильную навигацию на десктопе */
+  .navigation {
+    display: none;
+  }
 }
-
-.about__main-title {
-  font-family: var(--second-family), sans-serif;
-  font-weight: 400;
-  font-size: 25px;
-  color: #fafafa;
+/* Обновленные стили для прозрачной десктопной навигации */
+@media (min-width: 992px) {
+  .desktop-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent; /* Полностью прозрачный фон */
+    z-index: 1000;
+    box-shadow: none; /* Убираем тень */
+    display: block;
+  }
+  /* Стили для кнопок входа и регистрации */
+  .auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 15px;
+  }
+  .btn-login, .btn-register {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-family: var(--second-family), sans-serif;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+  }
+  .btn-login {
+    background-color: transparent;
+    border: 2px solid #ff5102;
+    color: #ff5102;
+  }
+  .btn-login:hover {
+    background-color: rgba(255, 81, 2, 0.1);
+  }
+  .btn-register {
+    background-color: #ff5102;
+    border: 2px solid #ff5102;
+    color: #fafafa;
+  }
+  .btn-register:hover {
+    background-color: #e64800;
+  }
 }
-
-.about__main-text {
-  font-family: var(--font-family), sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #fafafa;
-}
-
-.offering__title {
-  font-family: var(--second-family), sans-serif;
-  font-weight: 400;
-  font-size: 25px;
-  color: #fafafa;
-}
-
-.offering__professions, .offering__test, .offering__heroes {
-  border-radius: 11px;
-  padding: 14px 16px;
-  max-width: 350px;
-  background: #fafafa;
-}
-
-.offering__professions-title {
-  font-family: var(--second-family), sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #ff5102;
-}
-
-.offering__professions-text {
-  font-family: var(--font-family), sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  color: #393b38;
-  margin: 0;
-}
-
-.offering__test-href {
-  border-radius: 15px;
-  padding: 10px;
-  width: 100%;
-  background: #ff5102;
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.offering {
-  padding-bottom: 160px;
-}
-
-.main {
-  overflow: hidden;
-  position: relative;
-  padding-top: 363px;
-}
-
-.helmet {
-  top: 90px;
-  left: 100px;
-  z-index: -1;
-}
-
-.wrench {
-  top: -150px;
-  left: -200px;
-}
-
-.screw {
-  top: 200px;
-  left: -50px;
-}
-
-.screw-2 {
-  top: -50px;
-  left: 280px;
-  rotate: 60deg;
-  transform: scale(1.2);
-}
-
-.drill {
-  top: 1000px;
-  left: 200px;
-  z-index: -1;
-}
-
-.Confectionery-package {
-  top: 1200px;
-  left: -100px;
-  z-index: -1;
-}
-
 @media (min-width: 576px) {
   .container-sm {
     max-width: 540px;
