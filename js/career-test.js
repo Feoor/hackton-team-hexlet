@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
               <div class="test-nav mt-4 row g-3">
                 <button class="test-button col-5" id="retry-button">Пройти заново</button>
-                <a href="/pages/professions.html" class="test-button text-center col-5">Узнать больше</a>
+                <a href="../pages/catalog.html" class="test-button text-center col-5">Узнать больше</a>
               </div>
             </div>
           `;

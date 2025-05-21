@@ -45,6 +45,10 @@
     padding: 3px;
 }
 
+.corner-button svg {
+  vertical-align: baseline;
+}
+
 .corner-button svg path {
     fill: #ff5c00;
 }
@@ -124,7 +128,7 @@ button:hover {
 /* Стили для новых элементов */
 .catalog-header {
     text-align: center;
-    padding: 30px 20px;
+    padding: 120px 20px 30px;
 }
 
 .catalog-title {
@@ -232,4 +236,10 @@ button:hover {
 .hero-video{
     width: 100%;
 
+}
+
+@media (max-width: 992px) {
+  .catalog-header {
+    padding: 30px 20px;
+  }
 }
